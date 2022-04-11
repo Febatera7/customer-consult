@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const routes = require('./app/routes');
+require('./app/database/connection');
 
 class App {
     constructor() {
@@ -17,9 +19,7 @@ class App {
     };
 
     routes() {
-        this.server.use(express.Router().get('/', (req, res) => {
-            res.status(200).send({ msg: 'ok '});
-        }));
+        this.server.use(routes);
     };
 };
 
