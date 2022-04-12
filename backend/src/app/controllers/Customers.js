@@ -69,7 +69,7 @@ class CustomersController {
 
     async update(req, res) {
         try {
-            const { customerid } = req.headers;
+            const { customerid } = req.params;
             const updateData = req.body;
 
             const customer = await Customers.findById(customerid);
@@ -88,7 +88,7 @@ class CustomersController {
 
     async delete(req, res) {
         try {
-            const { customerid } = req.headers;
+            const { customerid } = req.params;
 
             const customer = await Customers.findById(customerid);
 

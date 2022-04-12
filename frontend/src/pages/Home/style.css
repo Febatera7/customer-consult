@@ -1,0 +1,107 @@
+.home-container {
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 30px;
+    margin: 0;
+}
+
+.home-container header {
+    display: flex;
+    align-items: center;
+}
+
+.home-container header span {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 24px;
+}
+
+.home-container header img {
+    height: 64px;
+}
+
+.home-container header a {
+    width: 260px;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.home-container header button {
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    margin-left: 16px;
+    transition: border-color 0.3s;
+}
+
+.home-container header button:hover {
+    border-color: #999;
+}
+
+.home-container h1 {
+    font-size: 80px;
+    color: #FFF;
+    margin-top: 80px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    list-style: circle;
+}
+
+.home-container ul li {
+    background: #FFF;
+    padding: 8px;
+    border-radius: 8px;
+    position: relative;
+    list-style-type: none;
+}
+.home-container table {
+    border: 1px solid #000;
+    background-color: #FFF;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.home-container table th {
+    height: 50px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.home-container table th td {
+    border: 1px solid #000;
+}
+
+.home-container table tr {
+    height: 50px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.home-container table tr td {
+    border: 1px solid #000;
+}
+
+.home-container table tr td button {
+    margin: 5px;
+}
+
+.textOverflow {
+    margin: 0;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.show{
+    display: block !important;
+  }

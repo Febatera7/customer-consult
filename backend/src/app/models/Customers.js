@@ -23,7 +23,7 @@ const customersSchema = new mongoose.Schema(
         phone_number: {
             type: String,
             required: true,
-            minlength: 11,
+            minlength: 10,
             maxlength: 11,
         },
         contract_date: {
