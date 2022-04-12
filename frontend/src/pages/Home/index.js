@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 import './style.css'
 import logoImg from '../../assets/legal-agreement.jpg';
 import { FiPower, FiTrash2, FiXOctagon, FiThumbsUp, FiThumbsDown } from 'react-icons/fi';
-import Modal from '../../components/Modal';
 import api from '../../services/api';
 
 export default function Home() {

@@ -94,14 +94,3 @@
 .home-container table tr td button {
     margin: 5px;
 }
-
-.textOverflow {
-    margin: 0;
-    overflow: hidden;
-    float: left;
-    position: relative;
-}
-
-.show{
-    display: block !important;
-  }
