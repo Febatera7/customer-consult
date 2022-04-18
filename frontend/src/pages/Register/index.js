@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import logoImg from '../../assets/contract-img.png';
+import contractImg from '../../assets/contract-img.png';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import api from '../../services/api';
@@ -37,19 +37,19 @@ export default function Register() {
     <div className="register-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Contract" />
-          <h1>Register</h1>
+          <img src={contractImg} alt="ContractIMG" />
+          <h1>Registrar</h1>
           <p>
-            Sign up to have a better view of your contracts.
+            Crie um usuário para gerenciar melhor seus contratos.
           </p>
           <Link className="back-link-register" to="/">
             <FiArrowLeft />
-            Go Back
+            Voltar
           </Link>
         </section>
         <form onSubmit={handleRegister}>
           <input
-            placeholder="Name"
+            placeholder="Nome"
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -60,12 +60,12 @@ export default function Register() {
             onChange={e => setEmail(e.target.value)}
           />
           <input
-            placeholder="Password"
+            placeholder="Senha"
             type='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
-          <button className="button-register" type="submit">Register</button>
+          <button className="button-register" type="submit">Registrar</button>
         </form>
       </div>
     </div>

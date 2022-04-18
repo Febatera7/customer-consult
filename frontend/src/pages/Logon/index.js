@@ -33,7 +33,7 @@ export default function Logon() {
           <img src={logoImg} alt="Contract" />
           <h1>Consulta de Contratos</h1>
           <input placeholder='E-mail' value={email} onChange={e => setEmail(e.target.value)} />
-          <input placeholder='Password' type='password' value={password} onChange={e => setPassword(e.target.value)} />
+          <input placeholder='Senha' type='password' value={password} onChange={e => setPassword(e.target.value)} />
           <button type="submit" className="button">Entrar</button>
           <Link className="back-link" to="/register">
             <FiLogIn size={16} color='#ffffff' />

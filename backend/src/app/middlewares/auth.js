@@ -6,7 +6,6 @@ const Users = require('../models/Users');
 
 module.exports = async (req, res, next) => {
     try {
-        console.log(req.headers);
         const authHeader = req.headers.authorization;
         
         if (!authHeader) {

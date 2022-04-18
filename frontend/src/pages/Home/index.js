@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import './style.css'
 import logoImg from '../../assets/legal-agreement.jpg';
-import { FiPower, FiTrash2, FiXOctagon, FiThumbsUp, FiThumbsDown } from 'react-icons/fi';
+import { FiPower, FiTrash2, FiXOctagon, FiThumbsUp, FiThumbsDown, FiSave } from 'react-icons/fi';
 import api from '../../services/api';
 
 export default function Home() {
@@ -55,9 +55,9 @@ export default function Home() {
     function formatedPhoneNumber(phone) {
         const isCellPhone = phone.length === 11 ? true : false;
         if (isCellPhone) {
-            return phone.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+            return phone.replace(/(\d{2})(\d{5})(\d{4})/, "($1)$2-$3");
         } else {
-            return phone.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3")
+            return phone.replace(/(\d{2})(\d{4})(\d{4})/, "($1)$2-$3")
         }
     }
 
@@ -69,6 +69,10 @@ export default function Home() {
                 <button type="button">
                     <FiPower size={18} color="#ffffff" onClick={handleLogout} />
                 </button>
+            <Link className="back-link" to="/contracts">
+                <FiSave size={16} color='#ffffff' />
+                Criar Novo Contrato
+            </Link>
             </header>
             <h1>Lista de Contratos</h1>
             <table>
@@ -92,7 +96,11 @@ export default function Home() {
                             <td>{formatedCpfOrCnpJ(result.cpf_or_cnpj)}</td>
                             <td>{formatedPhoneNumber(result.phone_number)}</td>
                             <td>{formatedData(result.contract_date)}</td>
-                            <td>{result.contract_value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</td>
+                            <td>{result.contract_value.toLocaleString('pt-br', {
+                                minimumFractionDigits: 2,
+                                style: 'currency',
+                                currency: 'BRL'
+                            })}</td>
                             <td>{result.contract_situation}</td>
                             <td>
                                 <button
