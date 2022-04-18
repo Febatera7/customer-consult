@@ -6,17 +6,21 @@ const Users = require('../models/Users');
 
 module.exports = async (req, res, next) => {
     try {
+        console.log(req.headers);
         const authHeader = req.headers.authorization;
-
+        
         if (!authHeader) {
+            console.log('aqui');
             throw new Error('Unauthorized');
         }
 
         const [, token] = authHeader.split(' ');
 
         if (!token) {
+            console.log("aqui 2")
             throw new Error('Unauthorized');
         }
+
 
         const user = await Users.findOne({ email: req.headers.email });
 

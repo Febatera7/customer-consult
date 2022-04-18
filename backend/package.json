@@ -11,14 +11,17 @@
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "memory-cache": "^0.2.0",
-    "mongoose": "^6.2.10"
+    "mongoose": "^6.2.10",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "2.9.0"
   },
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
+    "start-gendoc": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
